@@ -1,0 +1,875 @@
+/*清除默认*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,
+pre, code, form, fieldset, legend, input, textarea, p, 
+blockquote, th, td{
+	margin: 0;
+	padding: 0;
+	font-family: Microsoft YaHei, sans-serif;
+}
+a, address, b, big, blockquote, body, center, cite, code, dd,
+del, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, 
+h5, h6, html, i, iframe, img, ins, label, legend, li, ol, p, 
+pre, small, span, strong, u, ul, var{
+	margin: 0;
+	padding: 0;
+	font-family: Microsoft YaHei, sans-serif;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+
+body{
+	min-width: 980px;
+	background-color: #EEE;
+}
+
+.header{
+	width: 100%;
+	height: 80px;
+	background-color: #552A5C;
+	position: relative;
+}
+
+.git-icon {
+	background-image: url(../css-img/icon-github.png);
+	position: absolute;
+	width: 30px;
+	height: 34px;
+	right: 10px;
+	bottom: 0;
+	/*让文字缩进到看不见的地方，但是对搜索引擎是可见的，SEO优化*/
+	text-indent: -9999em;
+}
+@media screen and (max-width: 980px){
+	.git-icon{
+		display: none;
+	}
+}
+
+.header-bottom{
+	width: 980px;
+	height: 80px;
+	margin: 0 auto;
+	position: relative;	
+}
+
+.logo{
+	font-size: 22px;
+	color: #FFF;
+	font-family: 'Microsoft YaHei', 'SimHei', 'STHeiti', sans-serif;
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+}
+.list{
+	position: absolute;
+	right: 0;
+	bottom: 5px;
+}
+
+.list li{
+	display: inline-block;
+	margin-left: 28px;
+	font-size: 14px;
+	color: #FFF;
+	font-family: "宋体";
+}
+
+/*********************下面为正文大图的css**********************/
+.main-wrap{
+	width: 100%
+	height: 525px;
+}
+.main-wrap img{
+	width: 100%;
+	height: 530px;
+}
+.main-wrap-center{
+	width: 980px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.main-wrap-content{
+	width: 300px;
+	padding: 10px 10px 30px 10px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	color: #FFF;
+	font-family: 'Microsoft YaHei', 'SimHei', 'STHeiti', sans-serif;
+	background:linear-gradient(to bottom, rgba(255,255,255,0.7) 0%,
+		rgba(255,255,255,0.5) 25%,rgba(255,255,255,0) 100%)
+}
+.main-wrap-content h1{
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 14px;
+	margin-bottom: 9px;
+	text-align: right;
+}
+.main-wrap-content p{
+	font-size: 12px;
+	text-indent: 2em;
+	line-height: 150%;
+	text-align: justify;
+}
+
+/*下面为三个包含图片的div块所在区域的css*/
+.detail-wrap{
+	width: 100%;
+	height: 480px;
+}
+
+.detail-wrap-center{
+	width: 980px;
+	margin: 0 auto;
+/*	去除inline-block之间的间距，可设定其父元素的font-size为0*/
+	overflow: hidden;
+}
+/*这个div的作用是使用负边距增大detail-wrap-center右边宽度
+如果宽度没有设置，左右负边距会把元素向两个方向拉以增加宽度。
+在这里margin的作用相当于padding
+在浮动中使用负边距*/
+.detail-wrap-negmargin{
+	margin-right: -10px;
+}
+.detail-wrap-content{
+	width: 320px;
+	background-color: #FFF;
+	margin-right: 10px;
+	float: left;
+	margin-bottom: -10000px;
+	padding-bottom: 10000px;
+}
+.detail-wrap-content img{
+	display: block;
+	margin: 10px 10px 0px 10px;
+}
+.description{
+	font-size: 12px;
+	line-height: 170%;
+	font-family: "宋体";
+	margin: 15px 30px 25px;
+}
+/*下面是带头像的自我介绍*/
+.intro-wrap{
+	width: 100%;
+	height: 520px;
+	background-color: #FFF;
+	text-align: center;
+}
+.intro-wrap img{
+	border-radius: 80px;
+	position: relative;
+/*	相对定位，移动后原有位置还保留，不会被占用，
+	所以向上移动50px，下面还有50px原有位置保留，
+	正好距离下面的大标题为50px*/
+	top: -50px;
+}
+.intro-content{
+	width: 600px;
+	margin: 0 auto;
+
+}
+.intro-content h1{
+	font-size: 20px;
+	font-weight: normal;
+	font-family: "Century Gothic";
+	color: #000;
+}
+.intro-content p{
+	margin-top: 40px;
+	font-size: 14px;
+	color: #000;
+	font-family: "宋体";
+	line-height: 160%;
+	text-indent: 2em;
+	text-align: justify;
+}
+
+/*下面是footer的css*/
+.footer{
+	width: 100%;
+	height: 400px;
+	background-color: #000;
+	position: relative;
+}
+.footer-link{
+	width: 100%;
+	height: 35px;
+	border-bottom: 1px solid #2F2F2F;
+	text-align: center;
+}
+.footer-link a{
+	font-size: 11px;
+	color: #FFF;
+	line-height: 35px;
+	text-decoration: none;
+	margin: 0 12px;
+}
+.footer-detail-link{
+	width: 980px;
+	margin: 0 auto;
+	margin-top: 42px;
+	overflow: hidden;
+}
+.friendly-link{
+	width: 196px;
+	float: left;
+}
+.friendly-link span{
+	display: block;
+	font-size: 11px;
+	color: #ccc;
+	margin-bottom: 26px;
+}
+.friendly-link a{
+	display: block;
+	font-size: 7px;
+	color: #FFF;
+	text-decoration: none;
+	line-height: 19px;
+}
+.friendly-link a:hover{
+	text-decoration: underline;
+}
+.copyright{
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	left: 50%;
+	margin-left: -24px;
+}
+.copyright span{
+	display: block;
+	font-size: 11px;
+	color: #FFF;
+	margin: 44px 0;
+}
+.copyright a{
+	background-image: url(../css-img/icon-github.png);
+	display: block;
+	width: 30px;
+	height: 34px;
+
+}
+
+/*===============blog.html的css========*/
+.center{
+	width: 980px;
+	height: 1000px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+/*===============左侧栏布局============*/
+.blog-content{
+	width: 710px;
+	float: left;
+}
+.blog-post{
+	width: 710px;
+	padding: 23px 20px 17px 17px;
+	margin-bottom: 9px;
+	background: #FFF;
+	position: relative;
+/*===width=width+padding+border===*/
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing: border-box;
+}
+.post-tag{
+	position: absolute;
+	top: 20px;
+	left: -50px;
+}
+.post-tag span{
+	display: block;
+	width: 50px;
+	height: 40px;
+	font-size: 10px;
+	font-family: "Microsoft YaHei", sans-serif;
+	line-height: 40px;
+	text-align: center;
+	color: #FFF;
+}
+.tag-num{
+	background: #522A5C;
+}
+.tag-type{
+	background: #A660B7;
+}
+.blog-post h1{
+	font-size: 16px;
+	color: #A660B7;
+}
+.blog-post h2{
+	font-size: 12px;
+	color: #666;
+	padding: 10px 0 13px 0;
+}
+.blog-post p{
+	font-size: 11px;
+	line-height: 19px;
+	text-indent: 2em;
+	text-align: justify;
+}
+.blog-post section{
+	font-size: 11px;
+	color: #999;
+	margin-top: 33px;
+	text-align: right;
+}
+.page-nav{
+	font-size: 0;
+	text-align: center;
+}
+.page-nav a{
+	display: inline-block;
+	font-size: 16px;
+	text-decoration: none;
+	padding: 10px 15px;
+	margin:0 5px;
+}
+.click-invalid{
+	color: #888;
+	cursor: default;
+	background: #FFF;
+}
+.current-page{
+	color: #FFF;
+	font-weight: bold;
+	background:#A660B7;
+	cursor: default;
+}
+.click-valid{
+	color: #000;
+	background: #FFF;
+}
+
+/*==========右侧栏布局===========*/
+.side-bar{
+	width: 260px;
+	margin-left: 720px;
+}
+/*=========搜索框==========*/
+.search{
+	padding: 20px;
+	font-size: 0;
+	background: #FFF;
+	position: relative;
+}
+.keyword{
+	display: inline-block;
+	width: 220px;
+	height: 50px;
+	padding: 0 0 0 50px;
+	border: 1px solid #E2E2E2;
+	/*===width=width+padding+border===*/
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing: border-box;
+	background: url(../img/search.png) no-repeat;
+}
+.submit{
+	width: 48px;
+	height: 48px;
+	background: #DDD;
+	border: none;
+	text-align: center;
+	line-height: 50px;
+	color: #FFF;
+	font-size: 16px;
+	position: absolute;
+	top: 21px;
+	right: 21px;
+}
+.submit:hover{
+	background: #47456D;
+}
+/*=======分类栏========*/
+.classification{
+	width: 260px;
+	height: 201px;
+	margin: 10px 0;
+	border-top: 1px solid #DDD;
+}
+.classification a{
+	display: block;
+	width: 238px;
+	height: 50px;
+	background: #FFF;
+	border-bottom: 1px solid #DDD;
+	padding-left: 18px;
+	border-left: 4px solid #DFC6E6;
+	font-size: 9px;
+	line-height: 49px;
+}
+.classification a:hover{
+	border-left: 4px solid #522A5C;
+}
+/*日历*/
+.calendar{
+	width: 260px;
+	height: 260px;
+	background: #FFF;
+	font-size: 9px;
+	padding-top: 20px;
+}
+.choose-year-month{
+	width: 220px;
+	margin: 0 auto;
+	color: #773C88;
+	font-weight: bold;
+}
+.choose-year-month a{
+	text-decoration: none;
+}
+.choose-year-month span{
+	padding: 0 73px;
+}
+.cal-table{
+	width: 220px;
+	height: 220px;
+	text-align: center;
+	margin: 0 auto;
+	color: #999;
+	border-collapse: collapse;
+}
+.cal-table tr td,th{
+	border-bottom: 1px solid #EEE;
+}
+
+.today span{
+	display: inline-block;
+	background: #773C88;
+	color: #FFF;
+	width: 15px;
+	height: 18px;
+}
+/*============Tags框=============*/
+.tags{
+	width: 260px;
+	height: 197px;
+	background: #FFF;
+	margin-top: 10px;
+	padding-top: 13px;
+}
+.tags-title{
+	display: block;
+	font-size: 11px;
+	color: #666;
+	margin-left: 24px;
+
+}
+.tags-name{
+	margin: 14px 20px 0 24px;
+	color: #773C88;
+}
+.level1{
+	font-size: 26px;
+}
+.level2{
+	font-size: 20px;
+}
+.level3{
+	font-size: 14px;
+}
+.level4{
+	font-size: 12px;
+}
+.level5{
+	font-size: 9px;
+}
+
+/*=============gallery.html的css==============*/
+/*=============瀑布流=====================*/
+.center-gallery{
+	float: left;
+}
+.tab-menu{
+	font-size: 	0;
+}
+.tab-menu a{
+	display: inline-block;
+	padding: 11px 20px 18px 20px;
+	border-right: 1px solid #EEE;
+	border-bottom: 1px solid #EEE;
+	font-size: 10px;
+	color: #000;
+	background: #FFF;
+}
+
+.tab-active{
+	border-bottom: 1px solid #FFF;
+}
+.tab-all{
+	border-top: 4px solid #DFC6E6;
+}
+.tab-all:hover{
+	border-top-color: #52385B;
+}
+.tab-js{
+	border-top: 4px solid #92C0EF;
+}
+.tab-js:hover{
+	border-top-color: #522A5C;
+}
+.tab-ui{
+	border-top: 4px solid #d2a6ff;
+}
+.tab-ui:hover{
+	border-top-color: #5900B2;
+}
+.tab-framework{
+	border-top: 4px solid #ffa98c;
+}
+.tab-framework:hover{
+	border-top-color: #8C2300;
+}
+.tab-app{
+	border-top: 4px solid #ffe188;
+}
+.tab-app:hover{
+	border-top-color: #D9A300;
+}
+/*================================*/
+.water-fall{
+	width: 670px;
+	height: 1000px;
+	padding: 20px 20px 30px 20px;
+	/*background: yellow;*/
+	background: #FFF;
+}
+/*===========相册瀑布流左边==========*/
+.water-fall-left{
+	float: left;
+	width: 330px;
+	background: #FFF;
+}
+.gallery-pic{
+	position: relative;
+}
+.big-pic{
+	width: 330px;
+}
+.big-pic .img-description{
+	width: 330px;
+}
+.two-col-left{
+	column-count: 2;
+	column-gap: 10px;
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	-webkit-column-gap: 10px;
+	-moz-column-gap: 10px;	
+}
+.small-pic{
+	width: 160px;
+}
+.small-pic .img-description{
+	width: 160px;
+}
+.img-description{
+	position: absolute;
+	left: 0;
+	bottom: 4px;
+	padding: 10px 0 20px 0;
+	background: #552A5C;
+}
+.img-index{
+	float: left;
+	width: 50px;
+}
+.img-index span{
+	display: block;
+	width: 26px;
+	height: 26px;
+	border: 1px solid #FFF;
+	border-radius: 13px;
+	text-align: center;
+	font-size: 10px;
+	color: #FFF;
+	line-height: 26px;
+	margin-left: 10px;
+}
+.img-detail{
+	margin-left: 50px;
+	padding-right: 10px;
+	color: #FFF;
+}
+.img-detail h4{
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 14px;
+	padding-bottom: 9px;
+}
+.img-detail p{
+	font-size: 12px;
+	line-height: 12px;
+}
+/*===========相册瀑布流右边==========*/
+.water-fall-right{
+	margin-left: 340px;
+/*	background: blue;*/
+	background: #FFF;
+}
+.water-fall-right{
+	column-count: 2;
+	column-gap: 10px;
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	-webkit-column-gap: 10px;
+	-moz-column-gap: 10px;	
+}
+/*=============sidebar人气排行榜============*/
+.rank-box{
+	width: 260px;
+	height: 240px;
+	background: #FFF;
+	margin-top: 10px;
+}
+.rank-title{
+	display: block;
+	padding: 20px 0 15px 13px;
+	font-size: 15px;
+	color: #666;
+}
+.hot-list li{
+	height: 19px;
+	margin: 10px 0 0 13px;
+	color: #000;
+	font-size: 10px;
+	overflow: hidden;
+}
+.ranking{
+	width: 18px;
+	height: 18px;
+	border-radius: 9px;
+	background: #552A5C;
+	color: #FFF;
+	font-size: 9px;
+	text-align: center;
+	float: left;
+}
+.hot-list li p{
+	float: left;
+	margin-left: 10px;
+}
+.percentage-wrap{
+	box-sizing: border-box;
+	float: left;
+	margin-left: 10px;
+	width: 102px;
+	height: 18px;
+	border: 1px solid #532B5D;
+}
+.percentage{
+	height: 16px;
+	background: #552A5C;
+}
+
+
+/*=================about.html的css===================*/
+.content-about{
+	position: relative;
+	width: 980px;
+	height: 1500px;
+	margin: 0 auto;
+	margin-top: 100px;
+	margin-bottom: 25px;
+}
+.content-about-left{
+	width: 495px;
+	height: 1500px;
+	float: left;
+	background: #FFF;
+}
+.content-about-right{
+	width: 480px;
+	height: 1500px;
+	margin-left: 500px;
+	background: #FFF;
+}
+.head-pic{
+	position: relative;
+	height: 300px;
+}
+.head-pic img{
+	position: absolute;
+	width: 160px;
+	height: 160px;
+	border-radius: 80px;
+	top: -60px;
+	left: -82px;
+	z-index: 5;
+} 
+.round-background{
+	position: absolute;
+	width: 180px;
+	height: 180px;
+	border-radius: 90px;
+	background: #EEE;
+	top: -70px;
+	left: -92px;
+	z-index: 4;
+}
+.title-about{
+	position: absolute;
+	font-size: 20px;
+	top: 128px;
+	left: -139px;
+}
+.head-pic p{
+	position: absolute;
+	left: 30px;
+	top: 128px;
+	width: 310px;
+	text-indent: 2em;
+	font-size: 14px;
+	line-height: 24px;
+}
+.contact-pic{
+	position: relative;
+	height: 250px;
+}
+.contact-pic img{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	left: -52px;
+	z-index: 5;
+}
+.round-background-contact{
+	position: absolute;
+	width: 110px;
+	height: 110px;
+	border-radius: 55px;
+	background: #EEE;
+	left: -57px;
+	top: -5px;
+	z-index: 4;
+}
+.contact-pic ul{
+	position: absolute;
+	left: 30px;
+	top: 128px;
+	width: 310px;
+	text-indent: 2em;
+	font-size: 14px;
+	line-height: 24px;
+}
+.education-pic{
+	position: relative;
+	height: 350px;
+}
+.education-pic img{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	left: -52px;
+	z-index: 5;
+}
+.round-background-edu{
+	position: absolute;
+	width: 110px;
+	height: 110px;
+	border-radius: 55px;
+	background: #EEE;
+	left: -57px;
+	top: -5px;
+	z-index: 4;
+}
+
+.year-border{
+	position: absolute;
+	width: 69px;
+	height: 34px;
+	background: #EEE;
+	border-radius: 10px;
+	z-index: 4;
+	left: -36px;
+}
+.year-border-2008{
+	top: 125px;
+}
+.year-border-2011{
+	top: 190px;
+}
+.year-border-2015{
+	top: 260px;
+}
+.year-background{
+	position: absolute;
+	width: 59px;
+	height: 24px;
+	text-align: center;
+	background: #FFF;
+	border-radius: 5px;
+	left: -31px;
+	z-index: 5;
+}
+.year-background-2008{
+	top: 130px;
+}
+.year-background-2011{
+	top: 195px;
+}
+.year-background-2015{
+	top: 265px;
+}
+.school{
+	position: absolute;
+	left: 60px;
+}
+.school-2008{
+	top: 123px;
+}
+.school-2011{
+	top: 185px;
+}
+.school-2015{
+	top: 258px;
+}
+.intern-pic{
+	position: relative;
+}
+.intern-pic img{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	left: -52px;
+	z-index: 5;
+}
+.round-background-intern{
+	position: absolute;
+	width: 110px;
+	height: 110px;
+	border-radius: 55px;
+	background: #EEE;
+	left: -57px;
+	top: -5px;
+	z-index: 4;
+}
+.year-background-2014{
+	top: 130px;
+}
+.year-border-2014{
+	top: 125px;
+}
+.company{
+	position: absolute;
+	left: 60px;
+}
+.company-2014{
+	top: 120px;
+}
+.company-2015{
+	top: 257px;
+}
